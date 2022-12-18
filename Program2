@@ -8,6 +8,10 @@ public static void main(String[] args) {
 		driver.findElement(By.name("pwd")).sendKeys("manager");
 		driver.findElement(By.id("loginButton")).click();
 		driver.findElement(By.id("logoutLink"))
+		driver.manage().window().maximize();
+		
+		driver.manage().window().maximize();
+		
 	}
 	
 
