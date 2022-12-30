@@ -1,0 +1,26 @@
+package Practice;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Practies1 {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://ditaxpresso.com/#/contactus");
+		driver.findElement(By.name("First Name")).sendKeys("Rushikesh");
+		driver.findElement(By.name("Last Name")).sendKeys("Shinde");
+		driver.findElement(By.name("Phone")).sendKeys("7741996382");
+		driver.findElement(By.name("Email")).sendKeys("rushikesh@123.gmail.com");
+		driver.findElement(By.name("Title")).sendKeys("ok");
+		driver.findElement(By.name("Description")).sendKeys("jsbvsakgfjf");
+		driver.findElement(By.id("formsubmit")).click();
+	}
+
+}
